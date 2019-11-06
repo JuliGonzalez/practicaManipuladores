@@ -11,6 +11,17 @@ class JacobianaSingularidades:
     def pruebas(self):
         return np.array([[3, 2, 1, 0], [1, 2, 3, 4], [5, 2, 5, 8], [9, 8, 7, 6]])
 
+    def comprobacion_singularidad(self, matriz):
+        if np.linalg.det(matriz) == 0:
+            print("Determinante 0 por lo que no es una singularidad?")
+            print("retornando la matriz pseudoinversa")
+            return np.linalg.pinv(matriz)
+        else:
+            return np.linalg.inv(matriz)
+
+    def calculoVelocidades(self, matriz, velocidades):
+        return np.linalg.multi_dot([matriz, velocidades])
+
 
 if __name__ == "__main__":
     js = JacobianaSingularidades(1, 1, 0)
@@ -23,8 +34,7 @@ if __name__ == "__main__":
     # print(c)
     # print(np.around(c, 4))
     d = np.linalg.multi_dot([b, c, b])
-    # print(d)
-    # print(np.around(d))
+    print(np.round(d))
     # print(inv(b))
     #figure, _ = plt.subplots()
     # plt.show(figure)
