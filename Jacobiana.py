@@ -39,6 +39,9 @@ class Jacobiana:
         r = np.dot(m1, m2)
         return r[:, None]
 
+    def velocidad_cinematica_directa(self, jacobiana_matriz, velocidades):
+        return np.dot(jacobiana_matriz, np.transpose(velocidades))
+
 
 if __name__ == "__main__":
     jacobiana1 = Jacobiana(0.5, 0.5)
