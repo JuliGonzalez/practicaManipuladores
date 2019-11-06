@@ -10,7 +10,7 @@ class CinematicaDirecta:
         #self.a3 = a3
         # no se qe poner aqui
 
-    def cinematicaDirecta(self, a, b, c):
+    def cinematica_directa(self, a, b, c):
         return np.array([
             # primera fila:
             [math.cos(a) * math.cos(b) - math.sin(a) * math.sin(b),
@@ -34,13 +34,13 @@ if __name__ == "__main__":
     cinematica1 = CinematicaDirecta(0.5, 0.5)
     #cinematica2 = Cinematica_directa(0.7, 0.8)
     print("primera matriz")
-    print(cinematica1.cinematicaDirecta(0, 0, 0))
+    print(cinematica1.cinematica_directa(0, 0, 0))
     print("segunda matriz")
-    print(cinematica1.cinematicaDirecta(0, np.pi/2, 0))
+    print(cinematica1.cinematica_directa(0, np.pi / 2, 0))
     print("tercera matriz")
-    print(cinematica1.cinematicaDirecta(-np.pi/2, np.pi/2, 0.2))
+    print(cinematica1.cinematica_directa(-np.pi / 2, np.pi / 2, 0.2))
     print("cuarta matriz")
-    print(cinematica1.cinematicaDirecta(np.pi, 0, 0.4/2))
+    print(cinematica1.cinematica_directa(np.pi, 0, 0.4 / 2))
 
 
 
