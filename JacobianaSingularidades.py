@@ -8,8 +8,8 @@ class JacobianaSingularidades:
         self.a2 = a2
         self.a3 = a3
 
-    def pruebas(self):
-        return np.array([[3, 2, 1, 0], [1, 2, 3, 4], [5, 2, 5, 8], [9, 8, 7, 6]])
+    def jacobiana(self, a, b, c):
+        pass
 
     def comprobacion_singularidad(self, matriz):
         if np.linalg.det(matriz) == 0:
@@ -43,5 +43,8 @@ if __name__ == "__main__":
     # plt.matshow(np.random.random((50, 50)))
     # plt.imshow(np.random.random((50, 50)))
     plt.figure()
-    plt.plot(d)
+    #plt.plot(x, d, '-b', label='Matriz')
+    plt.plot(d, label='Matrix')
+    # figure1.set_xlabel('distance (m)')
+    # figure1.set_ylabel('Damped oscillation')
     plt.show()
