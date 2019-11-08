@@ -4,10 +4,10 @@ import math
 
 
 class CinematicaDirecta:
-    def __init__(self, a1, a2):
+    def __init__(self, a1, a2, a3):
         self.a1 = a1
         self.a2 = a2
-        #self.a3 = a3
+        self.a3 = a3
         # no se qe poner aqui
 
     def cinematica_directa(self, a, b, c):
@@ -31,7 +31,7 @@ class CinematicaDirecta:
 
 
 if __name__ == "__main__":
-    cinematica1 = CinematicaDirecta(0.5, 0.5)
+    cinematica1 = CinematicaDirecta(0.5, 0.5, 0)
     #cinematica2 = Cinematica_directa(0.7, 0.8)
     print("primera matriz")
     print(cinematica1.cinematica_directa(0, 0, 0))

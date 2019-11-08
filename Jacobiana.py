@@ -8,9 +8,10 @@ import math
 
 
 class Jacobiana:
-    def __init__(self, a1, a2):
+    def __init__(self, a1, a2, a3):
         self.a1 = a1
         self.a2 = a2
+        self.a3 = a3
 
     def matriz_jacobiana(self, a, b, c):
         return np.array([
@@ -44,9 +45,13 @@ class Jacobiana:
 
 
 if __name__ == "__main__":
-    jacobiana1 = Jacobiana(0.5, 0.5)
-    jacobiana2 = Jacobiana(1, 1)
-    m1 = jacobiana2.matriz_jacobiana(np.pi/4, -np.pi/4, 0)
+    jacobiana1 = Jacobiana(0.5, 0.5, 0)
+    jacobiana2 = Jacobiana(1, 1, 0)
+    caso1 = np.array([0, pi/90, 0])
+    caso2 = np.array([-pi / 90, pi / 90, 0])
+    caso3 = np.array([pi / 90, -pi / 90, -200/100])  # introducimos un valor determinado para a
+    caso4 = np.array([pi / 90, 0, -200/100])  # introducimos un valor determinado para a
+    m1 = jacobiana2.matriz_jacobiana(np.pi/4, -np.pi/4,  0)
     # print(m1)
     m2 = jacobiana2.velocidades(-np.pi/90, np.pi/90, 0)
     # print(m2)
