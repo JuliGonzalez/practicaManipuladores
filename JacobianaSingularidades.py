@@ -1,12 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+from Jacobiana import Jacobiana
+
 
 class JacobianaSingularidades:
     def __init__(self, a1, a2, a3):
         self.a1 = a1
         self.a2 = a2
         self.a3 = a3
+        self.jacobiana = Jacobiana.matriz_jacobiana(self.a1, self.a2, self.a3)
 
     def jacobiana(self, a, b, c):
         pass
