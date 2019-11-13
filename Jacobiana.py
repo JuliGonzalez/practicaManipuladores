@@ -45,8 +45,10 @@ if __name__ == "__main__":
     caso2 = np.array([-np.pi / 90, np.pi / 90, 0])
     caso3 = np.array([np.pi / 90, -np.pi / 90, -200/100])  # introducimos un valor determinado para a
     caso4 = np.array([np.pi / 90, 0, -200/100])  # introducimos un valor determinado para a
-    m1 = jacobiana2.matriz_jacobiana(np.pi/4, -np.pi/4,  0)
+    # m1 = jacobiana2.matriz_jacobiana(np.pi/4, -np.pi/4,  0)
+    m1 = jacobiana2.matriz_jacobiana(0, 0, 2)
     # print(m1)
-    m2 = jacobiana2.velocidades(-np.pi/90, np.pi/90, 0)
+    # m2 = jacobiana2.velocidades(-np.pi/90, np.pi/90, 0)
+    m2 = jacobiana2.velocidades(0, np.pi / 90, 0)
     # print(m2)
     print(jacobiana2.multiplicacion(m1, m2))
